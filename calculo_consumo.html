@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<h3>¿Alcohol o gasolina?</h3>
+
+<script>
+
+    document.write("Problema: Si un carro tiene un tanque de 40 litros.");
+    document.write("Usando gasolina y consumiendo todo el tanque se hace un camino de 480 kilómetros." + "<br>");
+    document.write("¿Cuál es el consumo de gasolina?" + "<br>");
+    document.write("Para calcular el consumo: divide la distancia recorrida entre la cantidad de litros gastados." + "<br>")
+    document.write("Imprime el valor utilizando document.write. Organiza las cuentas en variables.")
+    
+    
+    document.write("<br>");
+    document.write("<br>");
+    
+    //Se crean las variables, tanque,km con gasolina y  una llamada consumo con gasolina, esta ultima contiene una division de las variables tanque y km con gasolina, para sacar el recorrido por tanque.
+    var tanque= 40;
+    var kmConGasolina = 480;
+    var consumoConGasolina = kmConGasolina/tanque;
+
+    document.write("El consumo de gasolina/km es de " + consumoConGasolina);
+
+    document.write("<br>");
+    document.write("<br>");
+
+    //De la misma manera creamos una nueva variable llamada km con alcohol, conservamos la variable tanque y creamos una nueva variable llamada consumo con alcohol que tendra la division entre las variables tanque y km con alcohol, para calcular el recorrido por tanque.
+    tanque = 40;
+    var kmConAlcohol = 300;
+    var consumoConAlcohol = kmConAlcohol/tanque;
+    document.write("Por otro lado, con el alcohol: el mismo tanque de 40 litros hace un recorrido de 300 kilómetros. ¿Cuál es el consumo de alcohol/km?");
+    document.write("<br>");
+    document.write("El consumo de alcohol/km es de " + Math.round(consumoConAlcohol));
+</script>

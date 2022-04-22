@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Programa</h1>
+
+<script>
+
+
+//la etiqueta <hr> se usa para dibujar una linea en el lugar que ocupe en el codigo.
+    function saltarlinea() {
+        document.write("<br><br><br><hr><br><br>");
+    }
+
+    //la etiqueta <big> se usa para hacer la letra de mayor tamaño.
+    function imprimir(frase) {
+        document.write("<big>" + frase + "</big>");
+        saltarlinea();
+    }
+    var anho = 2025;
+
+    imprimir("<big>" + "Hola amigos" + "</big>");
+
+    // este código calcula las edades de Juan, Pedro y Carlos
+
+    imprimir("Juan tiene: " + (anho-2000) + " años");
+
+    imprimir("Pedro tiene: " + (anho-1995) + " años");
+
+    anho = 2030
+
+    imprimir("Carlos tiene: " + (anho-2005) + " años");
+
+</script>

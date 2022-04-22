@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<h1>¨Nuestra diferencia de edad es¨</h1>
+
+<script>
+//¿Cuántos años de diferencia tienes con tu hermano?
+//Escribe un programa que muestre el mensaje ¨Nuestra diferencia de edad es¨,
+//concatenando el resultado de la diferencia de tu edad con la de tu hermano (o de un amigo).
+//La respuesta puede dar negativa, sin duda. No olvides de usar las funciones saltarLinea e imprimir
+//y de incluir la etiqueta <meta> para resolver problemas de acentuación. No necesitas enviar la respuesta,
+//solo basta crear un programa, probar y verificar si todo funciona. ¡Si tienes alguna duda no dejes de 
+//postearla en el foro!
+
+
+
+//se crean las fuciones que usaremos, en este caso saltarlinea e imprimir
+//con sus respectivas instrucciones.
+
+function saltarlinea() {
+    document.write("<br><br>");
+}
+
+function imprimir(frase) {
+    document.write(frase);
+    saltarlinea();
+    
+}
+ //creamos las variables anho, miEdad, edadHermana, dif-edad que es la 
+ //variable que nos permitira hacer la resta para calcular la diferencia de edad
+ //esta ultima variable solo se creo para entender de mejor manera el ejercicio
+ //aunque si sustituimos la variable por la resta de variables miEdad - edadHermana 
+ //en el codigo, el resultado es el mismo
+  
+var anho = 2022;
+var miEdad = 26;
+var edadHermana =11;
+var dif_edad = miEdad - edadHermana;
+
+//Le damos un texto a nuestra function imprimir y usamos las variable creadas.
+    imprimir("Hola amigos");
+
+    imprimir("Mi hermana tiene "  + (anho - 2011) + " años ");
+    
+    imprimir("Yo tengo " + (anho-1996) + " años ");
+
+    imprimir("Nuestra diferencia de edad es de " + dif_edad);
+</script>

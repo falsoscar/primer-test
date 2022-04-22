@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA</h1>
+
+<script>
+
+
+//vamos a aprender como crear funciones con parametros.
+//function imprimir(frase) {
+    //document.write("imprimir alguna cosa");
+        //}
+
+
+    function saltarlinea() {
+        
+        document.write("<br><br><br>");
+    
+    }
+
+//se pueden juntar dos funciones para combinar lasa caracteriasticas de ambas,
+//en este caso se juntara la funcion de frase con saltarlinea.
+
+    function imprimir(frase) {
+
+            document.write(frase);
+            saltarlinea();
+        }
+
+    
+    var anho = 2025;
+
+    imprimir("hola amigos");
+        
+        //este codigo calcula las edades de Juan, Pedro y Carlos.
+
+        imprimir("Juan tiene: " + (anho-2000) + "años");
+
+        imprimir("Carlos tiene " + (anho-2005) + "años");
+
+        imprimir("Pedro tiene " + (anho-1995) + "años");
+</script>

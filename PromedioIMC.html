@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULAR IMC</h1>
+
+<script>
+
+//Manera 1
+    function saltolinea() {
+        document.write("<br><br><br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltolinea();
+    }
+
+    function calcularIMC(peso1,altura1,nombre1,peso2,altura2,nombre2){
+        imc1 = peso1 / (altura1 * altura1);
+        imc2 = peso2 / (altura2 * altura2);
+        
+        imprimir("El promedio del imc calculado de " + nombre1 + " y " + nombre2 
+        + " es: " + (imc1+imc2)/2);
+    }
+
+    calcularIMC(71,1.72,"Cristian",100,1.69,"Felipe");
+
+    calcularIMC(60,1.70,"Gabriela",45,1.45,"Ximena");
+
+
+//Estas son distintas maneras de llegar al mismo resultado.
+//Normalmente las funciones son para retornar algo, le pasamos parametros de entrada
+//y la funcion nos retorna un valor para ejecutar una funcion.
+//En este caso se retornara a la variable imc.
+
+//MAnera 2
+    function calculoIMC(peso,altura){
+        imc = peso / (altura * altura);    
+        return imc;
+    }
+
+    var imcCristian = calculoIMC(71,1.72);
+    var imcFelipe = calculoIMC(100,1.69);
+
+    imprimir("El promedio del imc calculado de Cristian y Felipe es: " + (calculoIMC(71,1.72) + calculoIMC(100,1.69))/2);
+
+    //Manera 3
+    //En este caso haremos el codigo mas pequeño poniendo directamente los
+    //datos para sacar el porcentaje directamente en el valor return.
+
+    function calcularIMC1(peso,altura){    
+        return peso / (altura * altura);
+    }
+
+    imprimir("El promedio del imc calculado de Gabriela y Ximena es: " + calcularIMC1(65,1.68)+calcularIMC1(45,1.45)/2);
+
+
+//Nota: Se vieron tres maneras distintas de realizar el mismo proceso, para no confundir al codigo
+//usamos 3 funciones llamadas calcularIMC, calculoIMC y calcularIMC1
+//pero solo se uso para ejemplificar el ejercicio, ustedes pueden elegir 
+//la manera que crean mas conveniente, recomendacion usen la manera 3 que es mas corta.
+
+
+//Como consejo no se recomienda darle tantas variables a lasa funciones, es mejor crear 
+//funciones objetivas con un solo valor y que ese valor nos retorne un dato,
+//es mejor crear funciones especificas para cada dato.
+</script>

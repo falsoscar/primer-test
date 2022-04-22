@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+
+<h1>
+    Calculo del Indice de Masa Corporal
+</h1>
+
+<script>
+
+    function saltarlinea(){
+        document.write("<br><br><br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+//Las funciones se pueden encapsular si manejaremos las mismas variables
+//para encapsular las variables peso, altura e IMC creamos una nueva funcion
+//la vamos a llamar calcularIMC
+//Para retornar un valor se usa la etiqueta return seguido de la variable que queremos retornar
+    function calcularIMC(peso,altura){
+        imc = peso / (altura * altura);
+        return(imc);
+    }
+
+    pesoCristian = 71;
+    alturaCristian = 1.72;
+    //imcCristian = pesoCristian / (alturaCristian * alturaCristian);
+    imcCristian = calcularIMC(pesoCristian, alturaCristian)
+    imprimir("El IMC de Cristian es: " + imcCristian);
+
+//Se pueden pasar directamente los valores de las variables a nuestro codigo, 
+//en este caso pasaremos los valores directamente de Cristian.
+
+    imcCristian = calcularIMC(71, 1.72);
+    imprimir("El IMC de Cristian es: " + imcCristian);
+
+    pesoFelipe = 100;
+    alturaFelipe = 1.69;
+    imcFelipe = calcularIMC(pesoFelipe, alturaFelipe);
+    imprimir("El IMC de Felipe es: " + imcFelipe);
+
+//Sabemos que podemos llamar a una funcion dentro de una funcion, pues 
+//lo haremos con la funcion calculoIMC y al hacer esto ya no necesitamos 
+//usar la variable return. 
+//Agregaremos una variable de tipo nombre para hacer más reconocible
+//nuestro codigo.
+
+    function calculoIMC(peso,altura,nombre){
+        imc = peso / (altura * altura);
+        imprimir("El IMC calculado de " + nombre+ " es " + imc);
+    }
+
+    calculoIMC(71,1.72, "Christian");
+    calculoIMC(100,1.69, "Felipe");
+</script>
